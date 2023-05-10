@@ -118,26 +118,6 @@ function updateLoadMoreBtn(totalHits) {
   }
 }
 
-// pobieranie i renderowanie wyników wyszukiwania
-function fetchImages() {
-  const URL = `https://pixabay.com/api/?key=${API_KEY}&q=${encodeURIComponent(
-    searchQuery
-  )}&image_type=photo&orientation=horizontal&safesearch=true&page=${page}&per_page=40`;
-  fetch(URL)
-    .then(response => response.json())
-    .then(data => {
-      if (parseInt(data.totalHits) > 0) {
-        render(data.hits);
-        Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`);
-        updateLoadMoreBtn(data.totalHits);
-      } else {
-        Notiflix.Notify.failure(
-          'Sorry, there are no images matching your search query. Please try again.'
-        );
-      }
-    });
-}
-
 // Funkcja obsługi zdarzenia wysłania formularza wyszukiwania
 function searchFormSubmitEv(event) {
   event.preventDefault();
