@@ -1,1 +1,12 @@
-{}
+{{
+    "name": "
+    goit-js-hw-11",
+    "source": "src/index.html",
+    "scripts": {
+      "start": "parcel",
+      "build": "parcel build"
+    },
+    "devDependencies": {
+      "parcel": "latest"
+    }
+  }}
