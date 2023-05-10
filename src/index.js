@@ -97,7 +97,7 @@ function render(hits) {
 searchForm.addEventListener('submit', searchFormSubmitEv);
 
 // Początkowo przycisk powinien być ukryty
-const loadMoreBtn = document.querySelector('.load-more');
+const loadMoreBtn = document.getElementById('load-more');
 loadMoreBtn.style.display = 'none';
 
 // Funkcja obsługi zdarzenia dla przycisku "Load more"
@@ -106,7 +106,7 @@ function loadMoreBtnClickEv() {
   fetchImages();
 }
 
-// Funkcja aktualizująca widoczność przycisku "Load more" na podstawie całkowitej liczby wyników
+// Funkcja aktualizująca widoczność przycisku "Load more"
 function updateLoadMoreBtn(totalHits) {
   if (totalHits <= page * 40) {
     loadMoreBtn.style.display = 'none';
@@ -118,7 +118,7 @@ function updateLoadMoreBtn(totalHits) {
   }
 }
 
-// Funkcja pobierająca i renderująca wyniki wyszukiwania
+// pobieranie i renderowanie wyników wyszukiwania
 function fetchImages() {
   const URL = `https://pixabay.com/api/?key=${API_KEY}&q=${encodeURIComponent(
     searchQuery
@@ -145,4 +145,9 @@ function searchFormSubmitEv(event) {
   searchQuery = searchInput.value;
   fetchImages();
   loadMoreBtn.style.display = 'none';
+  loadMoreBtn.style.textAlign = 'center';
+  loadMoreBtn.style.margin = '0 auto';
+  loadMoreBtn.style.display = 'block';
 }
+//obsługa zdarzenia
+loadMoreBtn.addEventListener('click', loadMoreBtnClickEv);

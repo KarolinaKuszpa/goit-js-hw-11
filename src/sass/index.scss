@@ -25,7 +25,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: flex-start; /* Równoważne wysokości elementów */
+  align-items: flex-start;
 }
 
 .photo-card {
@@ -47,7 +47,7 @@
 }
 
 .info {
-  width: 100%; /* Pełna szerokość dla elementów opisu */
+  width: 100%;
   box-sizing: border-box;
   padding: 5px;
   text-align: center;
@@ -60,7 +60,6 @@
 }
 
 .load-more {
-  display: none;
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
