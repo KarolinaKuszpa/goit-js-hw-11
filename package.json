@@ -1,6 +1,5 @@
-{{
-    "name": "
-    goit-js-hw-11",
+{
+    "name": "goit-js-hw-11",
     "source": "src/index.html",
     "scripts": {
       "start": "parcel",
@@ -9,4 +8,4 @@
     "devDependencies": {
       "parcel": "latest"
     }
-  }}
+  }
