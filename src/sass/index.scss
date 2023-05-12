@@ -20,19 +20,18 @@
   border: none;
   cursor: pointer;
 }
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
 }
 
 .photo-card {
   width: 25%;
   padding: 20px;
+  box-sizing: border-box;
   text-align: center;
-  display: flex;
-  flex-direction: column;
 }
 
 .photo-image {
@@ -45,6 +44,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30;
-  margin: 0 auto;
+  gap: 30px;
+  margin-top: 10px;
 }
