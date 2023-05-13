@@ -36,7 +36,8 @@
 
 .photo-image {
   width: 100%;
-  height: auto;
+  height: 100%;
+
   object-fit: cover;
 }
 
@@ -45,7 +46,7 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-top: 10px;
+  margin-bottom: 15 px;
 }
 .load-more {
   padding: 8px 16px;

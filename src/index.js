@@ -16,6 +16,8 @@ function searchFormSubmitEv(event) {
   event.preventDefault();
   page = 1;
   searchQuery = searchInput.value;
+  resultsContainer.innerHTML = ''; // Wyczyść zawartość kontenera przed pobraniem nowych zdjęć
+  updateLoadMoreBtn(0); // Ukryj przycisk "Load more" dla nowego wyniku wyszukiwania
   fetchImages();
 }
 
@@ -41,7 +43,6 @@ function fetchImages() {
 
 // Funkcja renderująca wyniki wyszukiwania
 function render(hits) {
-  resultsContainer.innerHTML = '';
   const lightbox = new SimpleLightbox('.img-look');
 
   hits.forEach(hit => {
